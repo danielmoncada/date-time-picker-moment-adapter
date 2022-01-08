@@ -1,6 +1,6 @@
 {
   "name": "@danielmoncada/angular-datetime-picker-moment-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular Date Time Picker (MomentJs Adpater)",
   "keywords": [
     "Angular",
@@ -35,6 +35,6 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@danielmoncada/angular-datetime-picker": "^13.0.1"
+    "@danielmoncada/angular-datetime-picker": "^13.1.0"
   }
 }
