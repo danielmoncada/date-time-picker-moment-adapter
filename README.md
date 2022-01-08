@@ -5,6 +5,7 @@ Angular Date Time Picker (MomentJs Adapter)
 [![npm](https://img.shields.io/npm/dm/@danielmoncada/angular-datetime-picker-moment-adapter.svg)](https://www.npmjs.com/package/@danielmoncada/angular-datetime-picker-moment-adapter)
 
 **Angular date time picker - MomentJs Adpater**
+
 **This package supports Angular 9+ / Angular 10 / Angular 11 / Angular 12 / Angular 13**
 
 Description
