@@ -47,8 +47,9 @@ How to Use
 
 Dependencies
 -------
-moment
-@danielmoncada/angular-datetime-picker
+- moment
+- @danielmoncada/angular-datetime-picker
+- tslib
 
 Demo
 -------
