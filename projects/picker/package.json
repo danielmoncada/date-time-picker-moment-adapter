@@ -1,6 +1,6 @@
 {
   "name": "@danielmoncada/angular-datetime-picker-moment-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Angular Date Time Picker (MomentJs Adpater)",
   "keywords": [
     "Angular",
@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/danielmoncada/date-time-picker-moment-adapter.git"
   },
-  "homepage": "https://github.com/danielmoncada/date-time-picker-adapter",
+  "homepage": "https://github.com/danielmoncada/date-time-picker-moment-adapter",
   "publishConfig": {
     "access": "public"
   },
