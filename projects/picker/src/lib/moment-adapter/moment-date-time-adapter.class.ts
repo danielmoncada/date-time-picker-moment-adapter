@@ -33,7 +33,6 @@ export const OWL_MOMENT_DATE_TIME_ADAPTER_OPTIONS = new InjectionToken<OwlMoment
         factory: OWL_MOMENT_DATE_TIME_ADAPTER_OPTIONS_FACTORY
     });
 
-/** @docs-private */
 export function OWL_MOMENT_DATE_TIME_ADAPTER_OPTIONS_FACTORY(): OwlMomentDateTimeAdapterOptions {
     return {
         useUtc: false,
