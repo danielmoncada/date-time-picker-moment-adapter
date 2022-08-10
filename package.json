@@ -1,6 +1,6 @@
 {
   "name": "@danielmoncada/angular-datetime-picker-moment-adapter",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Angular Date Time Picker (MomentJs Adapter)",
   "keywords": [
     "Angular",
@@ -25,7 +25,7 @@
     "test-with-coverage": "ng test --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox --code-coverage=true picker",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build_lib": "ng build picker --prod=true && cp README.md dist/picker",
+    "build_lib": "ng build picker --configuration production && cp README.md dist/picker",
     "npm_pack": "cd dist/picker && npm pack",
     "package_windows": "npm run build_lib && npm run npm_pack",
     "package_linux": "npm run build_lib && npm run npm_pack"
@@ -76,6 +76,8 @@
     "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "@angular/cdk": "^8.0.0 || ^9.0.0"
+    "@angular/cdk": "^13.1.1",
+    "@angular/common": "^13.1.2",
+    "@angular/core": "^13.1.2"
   }
 }
