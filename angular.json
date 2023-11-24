@@ -180,7 +180,6 @@
             }
         }
     },
-    "defaultProject": "date-time-picker-moment-adapter",
     "cli": {
       "analytics": false
     }
