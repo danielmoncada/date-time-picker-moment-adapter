@@ -1,6 +1,6 @@
 {
   "name": "@danielmoncada/angular-datetime-picker-moment-adapter",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Angular Date Time Picker (MomentJs Adapter)",
   "keywords": [
     "Angular",
@@ -46,13 +46,13 @@
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "np": "^8.0.4",
-    "rxjs": "~7.5.0",
+    "rxjs": "^7.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.3",
-    "@angular/cdk": "^16.2.12",
+    "@angular/cdk": "^17.0.1",
     "@angular/cli": "^17.0.3",
     "@angular/compiler-cli": "^17.0.4",
     "@angular/language-service": "^17.0.4",
