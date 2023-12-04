@@ -10,6 +10,7 @@ Angular Date Time Picker (MomentJs Adapter)
 
 Breaking Changes
 -------
+- Version 4.x.x >= no longer supports ng 16 - 13. If you need ng 16-13 support, stick with version 3.x.x.
 - Version 2.x.x no longer supports <= ng 13. If you need View Engine support, stick with version 1.x.x.
 
 Description
