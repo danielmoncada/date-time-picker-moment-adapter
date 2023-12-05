@@ -10,7 +10,7 @@
             "prefix": "owl",
             "schematics": {
                 "@schematics/angular:component": {
-                    "style": "sass"
+                    "style": "scss"
                 }
             },
             "architect": {
@@ -28,7 +28,7 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.sass"
+                            "src/styles.scss"
                         ],
                         "scripts": []
                     },
@@ -88,7 +88,7 @@
                         "tsConfig": "src/tsconfig.spec.json",
                         "karmaConfig": "src/karma.conf.js",
                         "styles": [
-                            "src/styles.sass"
+                            "src/styles.scss"
                         ],
                         "scripts": [],
                         "assets": [
