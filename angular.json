@@ -10,7 +10,7 @@
             "prefix": "owl",
             "schematics": {
                 "@schematics/angular:component": {
-                    "style": "sass"
+                    "style": "scss"
                 }
             },
             "architect": {
@@ -28,7 +28,7 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.sass"
+                            "src/styles.scss"
                         ],
                         "scripts": []
                     },
@@ -43,7 +43,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "aot": true,
                             "extractLicenses": true,
@@ -66,18 +65,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "date-time-picker-moment-adapter:build"
+                      "buildTarget": "date-time-picker-moment-adapter:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "date-time-picker-moment-adapter:build:production"
+                          "buildTarget": "date-time-picker-moment-adapter:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "date-time-picker-moment-adapter:build"
+                      "buildTarget": "date-time-picker-moment-adapter:build"
                     }
                 },
                 "test": {
@@ -88,7 +87,7 @@
                         "tsConfig": "src/tsconfig.spec.json",
                         "karmaConfig": "src/karma.conf.js",
                         "styles": [
-                            "src/styles.sass"
+                            "src/styles.scss"
                         ],
                         "scripts": [],
                         "assets": [
@@ -180,7 +179,6 @@
             }
         }
     },
-    "defaultProject": "date-time-picker-moment-adapter",
     "cli": {
       "analytics": false
     }
