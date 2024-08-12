@@ -26,8 +26,6 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@angular/cdk": "^17.0.0",
-    "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
     "moment": "^2.29.4"
   },
