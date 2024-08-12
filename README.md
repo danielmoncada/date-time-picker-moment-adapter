@@ -6,10 +6,11 @@ Angular Date Time Picker (MomentJs Adapter)
 
 **Angular date time picker - MomentJs Adpater**
 
-** This package supports Angular 17 **
+** This package supports Angular 18 **
 
 Breaking Changes
 -------
+- Version 5.x.x >= no longer supports ng 17. If you need ng 17 support, stick with version 4.x.x.
 - Version 4.x.x >= no longer supports ng 16 - 13. If you need ng 16-13 support, stick with version 3.x.x.
 - Version 2.x.x no longer supports <= ng 13. If you need View Engine support, stick with version 1.x.x.
 
