@@ -15,10 +15,17 @@
             },
             "architect": {
                 "build": {
-                    "builder": "@angular-devkit/build-angular:application",
+                    "builder": "@angular/build:application",
                     "options": {
                         "aot": true,
-                        "outputPath": "dist/date-time-picker-moment-adapter",
+                        "allowedCommonJsDependencies": [
+                            "file-saver",
+                            "moment",
+                            "moment-timezone"
+                        ],
+                        "outputPath":  {
+                            "base": "dist/date-time-picker-moment-adapter"
+                        },
                         "index": "src/index.html",
                         "polyfills": [
                             "src/polyfills.ts"
