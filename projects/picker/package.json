@@ -34,7 +34,6 @@
     "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@danielmoncada/angular-datetime-picker": "^18.1.0",
-    "angular-eslint": "^18.4.3"
+    "@danielmoncada/angular-datetime-picker": "^18.1.0"
   }
 }
