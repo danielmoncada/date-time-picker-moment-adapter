@@ -56,6 +56,7 @@
     "@angular/cli": "^18.2.12",
     "@angular/compiler-cli": "^18.2.13",
     "@angular/language-service": "^18.2.13",
+    "@danielmoncada/angular-datetime-picker": "^18.1.0",
     "@types/jasmine": "^3.10.0",
     "@types/jasminewd2": "^2.0.10",
     "@types/moment-timezone": "^0.5.30",

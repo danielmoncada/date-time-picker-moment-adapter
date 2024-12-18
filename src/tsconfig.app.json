@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "outDir": "../out-tsc/app",
@@ -11,5 +11,8 @@
     "strictTemplates": true,
     "enableIvy": true
   },
-  "files": ["main.ts", "polyfills.ts"]
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ]
 }
