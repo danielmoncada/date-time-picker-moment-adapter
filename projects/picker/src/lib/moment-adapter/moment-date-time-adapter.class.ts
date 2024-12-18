@@ -3,11 +3,10 @@
  */
 
 import { Inject, Injectable, InjectionToken, Optional } from '@angular/core';
-import * as _moment from 'moment';
-import { Moment } from 'moment';
+import _moment, { Moment } from 'moment';
 import { DateTimeAdapter, OWL_DATE_TIME_LOCALE } from '@danielmoncada/angular-datetime-picker';
 
-const moment = (_moment as any).default ? (_moment as any).default : _moment;
+const moment = (_moment as unknown)['default'] ? (_moment as unknown)['default'] : _moment;
 
 /** Configurable options for {@see MomentDateAdapter}. */
 export interface OwlMomentDateTimeAdapterOptions {
@@ -178,7 +177,7 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
     return moment.invalid();
   }
 
-  public isDateInstance(obj: any): boolean {
+  public isDateInstance(obj: unknown): boolean {
     return moment.isMoment(obj);
   }
 
@@ -208,14 +207,7 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
 
   public createDate(year: number, month: number, date: number): Moment;
 
-  public createDate(
-    year: number,
-    month: number,
-    date: number,
-    hours: number = 0,
-    minutes: number = 0,
-    seconds: number = 0,
-  ): Moment {
+  public createDate(year: number, month: number, date: number, hours = 0, minutes = 0, seconds = 0): Moment {
     if (month < 0 || month > 11) {
       throw Error(`Invalid month index "${month}". Month index has to be between 0 and 11.`);
     }
@@ -254,7 +246,7 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
     return this.createMoment().locale(this.getLocale());
   }
 
-  public format(date: Moment, displayFormat: any): string {
+  public format(date: Moment, displayFormat: string): string {
     date = this.clone(date);
     if (!this.isValid(date)) {
       throw Error('MomentDateTimeAdapter: Cannot format invalid date.');
@@ -262,7 +254,7 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
     return date.format(displayFormat);
   }
 
-  public parse(value: any, parseFormat: any): Moment | null {
+  public parse(value: unknown, parseFormat: unknown): Moment | null {
     if (value && typeof value === 'string') {
       return this.createMoment(value, parseFormat, this.getLocale(), this.parseStrict);
     }
@@ -274,8 +266,9 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
    * (https://www.ietf.org/rfc/rfc3339.txt) and valid Date objects into valid Moments and empty
    * string into null. Returns an invalid date for all other values.
    */
-  deserialize(value: any): Moment | null {
-    let date;
+  deserialize(value: unknown): Moment | null {
+    let date: _moment.Moment;
+
     if (value instanceof Date) {
       date = this.createMoment(value);
     }
@@ -288,11 +281,12 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
     if (date && this.isValid(date)) {
       return date;
     }
+
     return super.deserialize(value);
   }
 
   /** Creates a Moment instance while respecting the current UTC settings. */
-  private createMoment(...args: any[]): Moment {
+  private createMoment(...args: unknown[]): Moment {
     return this.options && this.options.useUtc ? moment.utc(...args) : moment(...args);
   }
 }
