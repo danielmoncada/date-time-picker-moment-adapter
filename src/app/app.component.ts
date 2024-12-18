@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 import { Moment } from 'moment';
-import * as moment from 'moment-timezone';
+import moment from 'moment-timezone';
 
 import { OwlDateTimeComponent } from '@danielmoncada/angular-datetime-picker';
 
@@ -10,21 +10,18 @@ import { OwlDateTimeComponent } from '@danielmoncada/angular-datetime-picker';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   @ViewChild('date_range_component', { static: true })
   date_range_component: OwlDateTimeComponent<AppComponent>;
   public selectedMoments: Moment[] = [
     moment('2019-03-11T08:00:00+11:00').tz('America/Los_Angeles'),
-    moment('2019-03-11T15:00:00+11:00').tz('America/Los_Angeles')
+    moment('2019-03-11T15:00:00+11:00').tz('America/Los_Angeles'),
   ];
 
   currentValue: Date = new Date('4/21/2020, 12:00 AM');
   endValue: Date = new Date('4/21/2020, 11:59 PM');
 
   open_once = false;
-
-  ngAfterViewInit() {
-  }
 
   selectedTrigger(_date) {
     console.log(_date);
