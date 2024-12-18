@@ -4,16 +4,16 @@
   "description": "Angular Date Time Picker (MomentJs Adapter)",
   "keywords": [
     "Angular",
-    "datepicker",
     "date picker",
-    "timepicker",
-    "time picker",
-    "datetime picker",
     "date time picker",
+    "datepicker",
+    "datetime picker",
     "material",
-    "ngx",
     "moment",
-    "momentjs"
+    "momentjs",
+    "ngx",
+    "time picker",
+    "timepicker"
   ],
   "author": "Maintained and updated by Daniel Moncada, original implementatiom by Daniel Pan",
   "license": "MIT",
