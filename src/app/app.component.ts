@@ -1,30 +1,26 @@
 import { Component, ViewChild } from '@angular/core';
-
-import { Moment } from 'moment';
 import moment from 'moment-timezone';
 
-import { OwlDateTimeComponent } from '@danielmoncada/angular-datetime-picker';
+import { OwlDateTimeComponent, OwlDateTimeModule } from '@danielmoncada/angular-datetime-picker';
+import { FormsModule } from '@angular/forms';
+import { Moment } from 'moment';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  imports: [FormsModule, JsonPipe, OwlDateTimeModule],
 })
 export class AppComponent {
   @ViewChild('date_range_component', { static: true })
   date_range_component: OwlDateTimeComponent<AppComponent>;
-  public selectedMoments: Moment[] = [
-    moment('2019-03-11T08:00:00+11:00').tz('America/Los_Angeles'),
-    moment('2019-03-11T15:00:00+11:00').tz('America/Los_Angeles'),
-  ];
+  selectedMoments: Date[] = [this.startAtValue, this.endAtValue];
+  private readonly now: Moment = moment().tz('Europe/Amsterdam');
+  readonly endAtValue: Date = moment(this.now).endOf('day').second(0).millisecond(0).toDate();
+  readonly startAtValue: Date = moment(this.now).startOf('day').subtract(3, 'days').toDate();
 
-  currentValue: Date = new Date('4/21/2020, 12:00 AM');
-  endValue: Date = new Date('4/21/2020, 11:59 PM');
-
-  open_once = false;
-
-  selectedTrigger(_date) {
+  selectedTrigger(_date: Date) {
     console.log(_date);
   }
 }
