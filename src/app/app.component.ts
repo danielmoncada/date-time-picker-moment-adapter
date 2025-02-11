@@ -11,6 +11,7 @@ import { JsonPipe } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   imports: [FormsModule, JsonPipe, OwlDateTimeModule],
+  standalone: true
 })
 export class AppComponent {
   @ViewChild('date_range_component', { static: true })
