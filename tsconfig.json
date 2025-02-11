@@ -1,14 +1,32 @@
-/*
-  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
-  It is not intended to be used to perform a compilation.
-
-  To learn more about this file see: https://angular.io/config/solution-tsconfig.
-*/
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "esModuleInterop": true
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "paths": {
+      "picker": [
+        "dist/picker"
+      ],
+      "picker/*": [
+        "dist/picker/*"
+      ]
+    }
   },
-  "files": [],
   "references": [
     {
       "path": "./src/tsconfig.app.json"

@@ -1,13 +1,14 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "outDir": "../out-tsc/app",
     "types": []
   },
-  "angularCompilerOptions": { 
-    "fullTemplateTypeCheck": true, 
-    "strictInjectionParameters": true, 
-    "strictTemplates": true ,
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "strictTemplates": true,
     "enableIvy": true
   },
   "files": [

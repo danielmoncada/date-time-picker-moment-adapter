@@ -1,6 +1,21 @@
+<h2>Daterange</h2>
+
 <label for="daterange">Datetime range (click, then press 'Set' to modify):</label>
-<input [(ngModel)]="selectedMoments" [selectMode]="'range'"
-       [owlDateTimeTrigger]="date_range_component" [owlDateTime]="date_range_component"
-       style="width: 100%; color: cornflowerblue"
-       id="daterange" matInput required>
-<owl-date-time #date_range_component [startAt]="currentValue" [endAt]="endValue" (afterPickerClosed)="selectedTrigger($event)" (dateSelected)="selectedTrigger($event)"></owl-date-time>
+<input
+  [(ngModel)]="selectedMoments"
+  [owlDateTimeTrigger]="date_range_component"
+  [owlDateTime]="date_range_component"
+  [selectMode]="'range'"
+  id="daterange"
+  required
+  style="width: 100%; color: cornflowerblue"
+/>
+<owl-date-time
+  #date_range_component
+  (afterPickerClosed)="selectedTrigger($event)"
+  (dateSelected)="selectedTrigger($event)"
+  [endAt]="endAtValue"
+  [startAt]="startAtValue"
+></owl-date-time>
+
+<div>selectedMoments: {{ selectedMoments | json }}</div>
