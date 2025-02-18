@@ -52,6 +52,9 @@ function range<T>(length: number, valueFunction: (index: number) => T): T[] {
 
 @Injectable()
 export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
+  public firstMonthOfTheYear: number = 0;
+  public firstDayOfTheWeek: number = 0;
+
   private _localeData: {
     longMonths: string[];
     shortMonths: string[];
