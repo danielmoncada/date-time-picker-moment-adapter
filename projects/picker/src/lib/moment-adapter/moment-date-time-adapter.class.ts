@@ -83,14 +83,16 @@ export class MomentDateTimeAdapter extends DateTimeAdapter<Moment> {
     this._localeData = {
       longMonths: momentLocaleData.months(),
       shortMonths: momentLocaleData.monthsShort(),
-      longDaysOfWeek: momentLocaleData.weekdays(),
-      shortDaysOfWeek: momentLocaleData.weekdaysShort(),
-      narrowDaysOfWeek: momentLocaleData.weekdaysMin(),
+      // Use Moment's built-in rotation (true parameter) to get weekdays starting with the locale's first day
+      longDaysOfWeek: momentLocaleData.weekdays(true),
+      shortDaysOfWeek: momentLocaleData.weekdaysShort(true),
+      narrowDaysOfWeek: momentLocaleData.weekdaysMin(true),
       dates: range(31, (i) => this.createDate(2017, 0, i + 1).format('D')),
     };
   
-    // Ensure firstDayOfTheWeek is set from locale
-    this.firstDayOfTheWeek = momentLocaleData.firstDayOfWeek();
+    // Set firstDayOfTheWeek to 0 since Moment already rotated the arrays
+    // This prevents the calendar component from rotating again
+    this.firstDayOfTheWeek = 0;
   }
 
   public getYear(date: Moment): number {
