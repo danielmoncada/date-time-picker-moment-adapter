@@ -5,11 +5,12 @@
 
 **Angular date time picker - MomentJs Adapter**
 
-** This package supports Angular 20 **
+** This package supports Angular 21 **
 
 Breaking Changes
 
 ---
+- Version 8.x.x >= no longer supports ng 20. If you need ng 20 support, stick with version 7.x.x.
 - Version 7.x.x >= no longer supports ng 19. If you need ng 19 support, stick with version 6.x.x.
 - Version 6.x.x >= no longer supports ng 18. If you need ng 18 support, stick with version 5.x.x.
 - Version 5.x.x >= no longer supports ng 17. If you need ng 17 support, stick with version 4.x.x.
